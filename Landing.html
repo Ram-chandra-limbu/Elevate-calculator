@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div class="calculator">
+            <header class="navbar">Elevate R</header>
+            <input type="text" placeholder="0" id="inputBox" class="inputBox">
+            <div>
+                <button class="operator">AC</button>
+                <button class="operator">DEL</button>
+                <button class="operator">%</button>
+                <button class="operator">/</button>
+            </div>
+            <div>
+                <button onclick="addfunction(7)">7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operator">*</button>
+            </div>
+            <div>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="operator">-</button>
+            </div>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operator">+</button>
+            </div>
+            <div>
+                <button>00</button>
+                <button>0</button>
+                <button>.</button>
+                <button class="equalBtn">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Script.js"></script>
+
+    <script>
+        function addfunction(seven) {
+            let input = document.getElementById("inputBox");
+            console.log("7")
+            input.value = seven
+        }
+    </script>
+</body>
+
+</html>
