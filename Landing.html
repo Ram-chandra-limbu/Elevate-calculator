@@ -20,7 +20,14 @@
         <div class="calculator">
             <header class="navbar"></header>
             <a href="https://www.facebook.com/profile.php?id=100088490993773" class="navbar">Elevate ®</a>
-            <textarea name="" placeholder="" class="inputBox" id="inputBox" cols="30" rows="10"></textarea>
+            <div class="arearesult" style="position:relative">
+                <textarea name="" placeholder="" class="inputBox" id="inputBox" cols="30" rows="10">        
+                </textarea>
+                    <div class="result" id="result" style="position: absolute;">
+                    <p id="resultt"></p>
+
+                    </div>
+            </div>
             <div>
                 <button class="operator">AC</button>
                 <button class="operator">DEL</button>
@@ -53,47 +60,24 @@
             </div>
         </div>
     </div>
-    <!-- <script>
-        
-        <script>
-  const inputElement = document.getElementById("myInput");
 
-  inputElement.addEventListener("keydown", function (event) {
-    if (event.keyCode === 13) {
-      // Handle the Enter key press here
-      // For example, you can call a function:
-      handleEnterKeyPress();
-    }
-  });
+    <script>
+        const textareaElement = document.getElementById("inputBox");
 
-  function handleEnterKeyPress() {
-    // Your code to handle the Enter key press in the input field
-    console.log("Enter key pressed in the input field");
-  }
-</script>
-Handling Enter Key Press in Textareas:
-Similar to input fields, you can handle the Enter key press within a textarea by listening for the "keydown" event and checking the event keycode.
-html
-Copy code
-<textarea id="myTextarea"></textarea> -->
+        textareaElement.addEventListener("keydown", function (event) {
+            if (event.keyCode === 13 && !event.shiftKey) {
+                result();
+                // Handle the Enter key press here
+                // For example, you can call a function:
+                handleEnterKeyPress();
+                event.preventDefault(); // Prevent default behavior (line break) when Enter is pressed
+            }
+        });
 
-<script>
-  const textareaElement = document.getElementById("inputBox");
-
-  textareaElement.addEventListener("keydown", function (event) {
-    if (event.keyCode === 13 && !event.shiftKey) {
-        result();
-      // Handle the Enter key press here
-      // For example, you can call a function:
-      handleEnterKeyPress();
-      event.preventDefault(); // Prevent default behavior (line break) when Enter is pressed
-    }
-  });
-
-  function handleEnterKeyPress() {
-    // Your code to handle the Enter key press in the textarea
-    console.log("Enter key pressed in the textarea");
-  }
+        function handleEnterKeyPress() {
+            // Your code to handle the Enter key press in the textarea
+            console.log("Enter key pressed in the textarea");
+        }
 
     </script>
     <script src="../Script.js"></script>
