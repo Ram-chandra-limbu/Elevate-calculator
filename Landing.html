@@ -18,31 +18,32 @@
 <body>
     <div>
         <div class="calculator">
-            <header class="navbar">Elevate R</header>
-            <input type="text" placeholder="0" id="inputBox" class="inputBox">
+            <header class="navbar"></header>
+            <a href="https://www.facebook.com/profile.php?id=100088490993773" class="navbar">Elevate ®</a>
+            <textarea name="" placeholder="" class="inputBox" id="inputBox" cols="30" rows="10"></textarea>
             <div>
                 <button class="operator">AC</button>
                 <button class="operator">DEL</button>
                 <button class="operator">%</button>
-                <button class="operator">/</button>
+                <button class="operator1">/</button>
             </div>
             <div>
-                <button onclick="addfunction(7)">7</button>
+                <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button class="operator">*</button>
+                <button class="operator1">*</button>
             </div>
             <div>
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button class="operator">-</button>
+                <button class="operator1">-</button>
             </div>
             <div>
                 <button>1</button>
                 <button>2</button>
                 <button>3</button>
-                <button class="operator">+</button>
+                <button class="operator1">+</button>
             </div>
             <div>
                 <button>00</button>
@@ -52,16 +53,50 @@
             </div>
         </div>
     </div>
+    <!-- <script>
+        
+        <script>
+  const inputElement = document.getElementById("myInput");
 
-    <script src="../Script.js"></script>
+  inputElement.addEventListener("keydown", function (event) {
+    if (event.keyCode === 13) {
+      // Handle the Enter key press here
+      // For example, you can call a function:
+      handleEnterKeyPress();
+    }
+  });
 
-    <script>
-        function addfunction(seven) {
-            let input = document.getElementById("inputBox");
-            console.log("7")
-            input.value = seven
-        }
+  function handleEnterKeyPress() {
+    // Your code to handle the Enter key press in the input field
+    console.log("Enter key pressed in the input field");
+  }
+</script>
+Handling Enter Key Press in Textareas:
+Similar to input fields, you can handle the Enter key press within a textarea by listening for the "keydown" event and checking the event keycode.
+html
+Copy code
+<textarea id="myTextarea"></textarea> -->
+
+<script>
+  const textareaElement = document.getElementById("inputBox");
+
+  textareaElement.addEventListener("keydown", function (event) {
+    if (event.keyCode === 13 && !event.shiftKey) {
+        result();
+      // Handle the Enter key press here
+      // For example, you can call a function:
+      handleEnterKeyPress();
+      event.preventDefault(); // Prevent default behavior (line break) when Enter is pressed
+    }
+  });
+
+  function handleEnterKeyPress() {
+    // Your code to handle the Enter key press in the textarea
+    console.log("Enter key pressed in the textarea");
+  }
+
     </script>
+    <script src="../Script.js"></script>
 </body>
 
 </html>

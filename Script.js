@@ -33,14 +33,18 @@ let arr = Array.from(buttons);
 arr.forEach(button => {
     button.addEventListener("click", (e) => {
         const buttonText = e.target.innerHTML;
+
+        // if(window.KeyboardEvent('enter')){
+        //     console.log("Enter")
+        // }
+        let fielld=document.getElementById('inputBox')
+        fielld.onkeydown=function(e){
+            if (e.k == 13) {
+                alert('enter key pressed');
+              }}
         
         if (buttonText === '=') {
-            try {
-                string = evalExpression(string);
-                input.value = string;
-            } catch (error) {
-                input.value = "Error";
-            }
+            result();
         } else if (buttonText === 'AC') {
             string = "";
             input.value = string;
@@ -53,7 +57,19 @@ arr.forEach(button => {
         }
     });
 });
+function result(){
+    try {
+        let value=document.getElementById('inputBox');
+        console.log(value.value)
+
+        string = evalExpression(value.value);
+        input.value = string;
+    } catch (error) {
+        input.value = "Error";
+    }
+}
 
 function evalExpression(expression) {
     return Function('return ' + expression)();
 }
+
